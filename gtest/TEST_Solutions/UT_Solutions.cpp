@@ -68,3 +68,16 @@ TEST_F(SolutionsTest, ArePermutations)
         EXPECT_EQ(ret, expects[i]);
     }
 }
+
+TEST_F(SolutionsTest, IsPalindromePermutation)
+{
+    Solutions s;
+    std::vector<std::string> strs{"taco cat", "ccaa", "ooo", "bbooo"};
+    std::vector<bool> expects{true, true, true, true};
+
+    for (unsigned int i = 0; i < strs.size(); i++)
+    {
+        bool ret = s.IsPalindromePermutation(strs[i]);
+        EXPECT_EQ(ret, expects[i]);
+    }
+}

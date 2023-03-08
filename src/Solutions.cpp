@@ -38,7 +38,6 @@ bool Solutions::ArePermutations(std::string &s1, std::string &s2)
      * Iterate map for != 0 values - O(n)
      * Total complexity O(nlogn)
      */
-    std::cout << "Checking " << s1 << " " << s2 << "\n";
     std::map<char, int> frequencies;
     for (char c : s1)
     {
@@ -75,5 +74,62 @@ bool Solutions::ArePermutations(std::string &s1, std::string &s2)
             return false;
         }
     }
+    return true;
+}
+
+/**
+ * 1.3. Write a method to replace all spaces in a string with '%20'.
+ * You may assume that the string has sufficient space at the end to hold the additional characters
+ *  and that you are given the "true" length of the string.
+ */
+std::string Solutions::URLify(std::string &)
+{
+    // TODO:
+    return std::string{};
+}
+
+/**
+ * 1.4. : Given a string, write a function to check if it is a permutation of a palindrome.
+ * A palindrome is a word or phrase that is the same forwards and backwards. A permutation
+ * is a rearrangement of letters. The palindrome does not need to be limited to just dictionary words.
+ *
+ * EXAMPLE: "taco cat" and "atco cta"
+ */
+bool Solutions::IsPalindromePermutation(std::string &str)
+{
+    std::map<char, int> frequencies;
+    for (char c : str)
+    {
+        if (c == ' ')
+            continue;
+        if (frequencies.find(c) != frequencies.end())
+        {
+            frequencies[c] += 1;
+        }
+        else
+        {
+            frequencies[c] = 1;
+        }
+    }
+
+    // for (auto &it : frequencies)
+    // {
+    //     std::cout << it.first << " " << it.second << "\n";
+    // }
+
+    int oddFrequencies = 0;
+    for (auto &it : frequencies)
+    {
+        if (it.second % 2 != 0)
+        {
+            if (oddFrequencies == 1)
+            {
+                /* Cannot have a palindrome with two letters appearing an odd number of times */
+                return false;
+            }
+            oddFrequencies += 1;
+        }
+    }
+
     return true;
 }
