@@ -23,7 +23,7 @@ std::map<char, int> BuildFrequencyMap(std::string &str)
  * 1.1 Write an algorithm to determine if a string has all unique characters.
  *
  */
-bool Solutions::AllUniqueCharacters(std::string &str)
+bool Chapter1::AllUniqueCharacters(std::string &str)
 {
     /**
      * Add each character to the map. If already there, return false
@@ -47,7 +47,7 @@ bool Solutions::AllUniqueCharacters(std::string &str)
  * 1.2. Given two strings, write a method to decide if one is
  * a permutation of the other.
  */
-bool Solutions::ArePermutations(std::string &s1, std::string &s2)
+bool Chapter1::ArePermutations(std::string &s1, std::string &s2)
 {
     /**
      * Build a frequency map with all characters in s1. - O(nlogn)
@@ -99,7 +99,7 @@ bool Solutions::ArePermutations(std::string &s1, std::string &s2)
  * You may assume that the string has sufficient space at the end to hold the additional characters
  *  and that you are given the "true" length of the string.
  */
-std::string Solutions::URLify(std::string &)
+std::string Chapter1::URLify(std::string &)
 {
     // TODO:
     return std::string{};
@@ -112,7 +112,7 @@ std::string Solutions::URLify(std::string &)
  *
  * EXAMPLE: "taco cat" and "atco cta"
  */
-bool Solutions::IsPalindromePermutation(std::string &str)
+bool Chapter1::IsPalindromePermutation(std::string &str)
 {
     /**
      * Build a frequency map O (nlogn) and iterate through it O(n).
@@ -156,7 +156,7 @@ bool Solutions::IsPalindromePermutation(std::string &str)
  * remove a character, or replace a character.
  * Given two strings, write a function to check if they are one edit (or zero edits) away.
  */
-bool Solutions::OneAway(std::string &s1, std::string &s2)
+bool Chapter1::OneAway(std::string &s1, std::string &s2)
 {
     // TODO:
     return false;
