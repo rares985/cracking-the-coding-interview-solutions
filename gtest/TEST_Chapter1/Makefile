@@ -12,7 +12,7 @@ EXEC_NAME = utSolution
 GTEST_JSON_OUTPUT = $(EXEC_NAME).json
 
 # Unit test files (files containing test definitions)
-UT_SRC = UT_Solutions.cpp
+UT_SRC = UT_Chapter1.cpp
 UT_OBJ = $(UT_SRC:%.cpp=$(OBJS_OUT)/%.o)
 
 # Stub files
@@ -23,7 +23,7 @@ MOCK_SRC =
 MOCK_OBJ = $(MOCK_SRC:%.cpp=$(MOCK_OBJS_DIR)/%.o)
 
 # File(s) for which unit tests are written
-SRC = Solutions.cpp
+SRC = Chapter1.cpp
 OBJ = $(SRC:%.cpp=$(OBJS_OUT)/%.o)
 
 # Additional include search directories

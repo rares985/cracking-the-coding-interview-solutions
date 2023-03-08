@@ -1,9 +1,9 @@
-#ifndef SOLUTIONS_H_
-#define SOLUTIONS_H_
+#ifndef CHAPTER_1_H_
+#define CHAPTER_1_H_
 
 #include <string>
 
-class Solutions
+class Chapter1
 {
 protected:
     bool AllUniqueCharacters(std::string &);
@@ -11,5 +11,6 @@ protected:
     std::string URLify(std::string &);
 
     bool IsPalindromePermutation(std::string &);
+    bool OneAway(std::string &, std::string &);
 };
-#endif /* SOLUTIONS_H_ */
+#endif /* CHAPTER_1_H_ */

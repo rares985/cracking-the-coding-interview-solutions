@@ -4,7 +4,7 @@
 #define protected public
 
 #include <stdio.h>
-#include "Solutions.h"
+#include "Chapter1.h"
 
 #include <bits/stdc++.h>
 
@@ -18,15 +18,15 @@
 // using ::testing::SetArrayArgument;
 // using ::testing::StrEq;
 
-class SolutionsTest : public ::testing::Test
+class Chapter1Test : public ::testing::Test
 {
 
 public:
-    SolutionsTest()
+    Chapter1Test()
     {
     }
 
-    virtual ~SolutionsTest()
+    virtual ~Chapter1Test()
     {
     }
 
@@ -39,9 +39,9 @@ public:
     }
 };
 
-TEST_F(SolutionsTest, AllUniqueCharacters)
+TEST_F(Chapter1Test, AllUniqueCharacters)
 {
-    Solutions s;
+    Chapter1 s;
 
     std::vector<std::string> strs{
         "a", "ab", "aa", "abb", "aab", "aaa", "abc", "abca"};
@@ -54,9 +54,9 @@ TEST_F(SolutionsTest, AllUniqueCharacters)
     }
 }
 
-TEST_F(SolutionsTest, ArePermutations)
+TEST_F(Chapter1Test, ArePermutations)
 {
-    Solutions s;
+    Chapter1 s;
 
     std::vector<std::string> lefts{"a", "aa", "abc", "aca", "bca"};
     std::vector<std::string> rights{"b", "aa", "cba", "ccc", "dce"};
@@ -69,9 +69,9 @@ TEST_F(SolutionsTest, ArePermutations)
     }
 }
 
-TEST_F(SolutionsTest, IsPalindromePermutation)
+TEST_F(Chapter1Test, IsPalindromePermutation)
 {
-    Solutions s;
+    Chapter1 s;
     std::vector<std::string> strs{"taco cat", "ccaa", "ooo", "bbooo"};
     std::vector<bool> expects{true, true, true, true};
 

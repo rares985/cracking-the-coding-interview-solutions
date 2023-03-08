@@ -1,7 +1,24 @@
-#include "Solutions.h"
+#include "Chapter1.h"
 #include <map>
 #include <iostream>
 
+std::map<char, int> BuildFrequencyMap(std::string &str)
+{
+    std::map<char, int> frequencies;
+    for (char c : str)
+    {
+        if (frequencies.find(c) != frequencies.end())
+        {
+            frequencies[c] += 1;
+        }
+        else
+        {
+            frequencies[c] = 1;
+        }
+    }
+
+    return frequencies;
+}
 /**
  * 1.1 Write an algorithm to determine if a string has all unique characters.
  *
@@ -97,6 +114,11 @@ std::string Solutions::URLify(std::string &)
  */
 bool Solutions::IsPalindromePermutation(std::string &str)
 {
+    /**
+     * Build a frequency map O (nlogn) and iterate through it O(n).
+     * If any two characters have odd frequencies, they cannot be palindromes.
+     * Total complexity: O(nlogn)
+     */
     std::map<char, int> frequencies;
     for (char c : str)
     {
@@ -111,11 +133,6 @@ bool Solutions::IsPalindromePermutation(std::string &str)
             frequencies[c] = 1;
         }
     }
-
-    // for (auto &it : frequencies)
-    // {
-    //     std::cout << it.first << " " << it.second << "\n";
-    // }
 
     int oddFrequencies = 0;
     for (auto &it : frequencies)
@@ -132,4 +149,15 @@ bool Solutions::IsPalindromePermutation(std::string &str)
     }
 
     return true;
+}
+
+/**
+ * 1.5. There are three types of edits that can be performed on strings: insert a character,
+ * remove a character, or replace a character.
+ * Given two strings, write a function to check if they are one edit (or zero edits) away.
+ */
+bool Solutions::OneAway(std::string &s1, std::string &s2)
+{
+    // TODO:
+    return false;
 }
