@@ -5,7 +5,7 @@
 
 class Chapter1
 {
-protected:
+public:
     bool AllUniqueCharacters(std::string &);
     bool ArePermutations(std::string &, std::string &);
     std::string URLify(std::string &);

@@ -3,6 +3,7 @@
 
 class Chapter2
 {
+public:
     void RemoveDuplicates();
     void GetKthFromEnd(int k);
     void DeleteMiddleNode();
